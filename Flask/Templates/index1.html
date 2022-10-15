@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>
+            Credit Card Approval Prediction
+        </title>
+        <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class=nav>
+            <ul>
+                <li><a href="/Prediction">Prediction</a></li>
+                <li><a href="/">Home</a></li>
+              </ul>
+        </div>
+        <div class="header">
+            <h1>Credit Card Approval Prediction</h1>
+            <h2>Using IBM Watson ML</h2>
+        </div>
+        <div class="row">
+
+            
+              <div class="main2">
+    
+                <form  action = "/predict" method = "post" >
+
+
+                <p>
+                    Gender<font color="red"><sup>*</sup></font>
+                    <select name= "gen" id="gen" required>
+                    <option > Select Gender </option>
+                    <option value = "0"> Female </option>
+                    <option value = "1"> Male </option>
+                    </select>
+                    </p>
+
+                 
+
+                    <p>
+                    Own Car or Not .?<font color="red"><sup>*</sup></font>
+                        <select name= "car" id="car" required>
+                        <option> Select Yes or No </option>
+                        <option value = "0"> No </option>
+                        <option value ="1"> Yes</option>
+                        </select>
+                        </p>
+
+
+                        <p>     
+                    Own Real Estate .?<font color="red"><sup>*</sup></font>
+                        <select name= "estate" id="estate" required>
+                        <option> Select Yes or No </option>
+                        <option value = "0"> No </option>
+                        <option value ="1"> Yes</option>
+                        </select>
+                        </p>
+                    
+            
+
+                        <!-- <label for="appointment_message" class="text-black">Message</label> -->
+                        <p> Total Annual Income <font color="red"><sup>*</sup></font>
+                       <input class="form1" type = "number" name= "annualin" id="annualin"/> </p>
+            
+            
+
+
+                        <!-- <label for="appointment_message" class="text-black">Message</label> -->
+                        <p> Type of Income<font color="red"><sup>*</sup></font>
+                            <select name= "intype" id="intype" required>
+                                <option> Select Yes or No </option>
+                                <option value = "0"> Pensioner </option>
+                                <option value ="1"> Student</option>
+                                <option value ="2"> Working</option>
+                                </select>
+                                </p> 
+
+
+
+
+                                <p>Education<font color="red"><sup>*</sup></font>
+                                    <select name= "edu" id="edu" required>
+                                        <option> Select Education</option>
+                                        <option value = "0">Academic Degree </option>
+                                        <option value ="1"> Higher Education</option>
+                                        <option value ="2"> Secondary</option>
+                                        </select>
+                                        </p> 
+
+
+                                        <p>Marital Status<font color="red"><sup>*</sup></font>
+                                            <select name= "marital" id="marital" required>
+                                                <option> Select Marital Status</option>
+                                                <option value = "0">Married </option>
+                                                <option value ="1"> Single</option>
+                                                </select>
+                                                </p> 
+                                                <p>Type of Housing<font color="red"><sup>*</sup></font>
+                                                    <select name= "housetype" id="housetype" required>
+                                                        <option> Select Housing Type</option>
+                                                        <option value = "0">House / Appartment </option>
+                                                        <option value ="1"> With Parents</option>
+                                                        </select>
+                                                        </p> 
+                                        <p> Days Birth <font color="red"><sup>*</sup></font>
+                                            <input class="form1" type = "number" name= "Dbirth" id="Dbirth"/> </p>
+                  
+                      
+            
+
+
+                         <p> Days Employed <font color="red"><sup>*</sup></font>
+                            <input  class="form1"  type = "number" name= "DEmployed" id="DEmployed"/> </p>
+
+
+                            
+
+                         <p> Family Members <font color="red"><sup>*</sup></font>
+                            <input  class="form1"  type = "number" name= "Fam_mem" id="Fam_mem"/> </p>
+
+                            <p> EMI Paid Off <font color="red"><sup>*</sup></font>
+                                <input  class="form1"  type = "number" name= "paid_off" id="paid_off"/> </p>
+
+
+                                
+                            <p> EMI of Past Dues<font color="red"><sup>*</sup></font>
+                                <input  class="form1"  type = "number" name= "pastdue" id="pastdue"/> </p>
+               
+            
+                        <!-- <label for="appointment_message" class="text-black">Message</label> -->
+                        <p> Number of Loans <font color="red"><sup>*</sup></font>
+                            <input  class="form1"  type = "number" name= "no_loan" id="no_loan"/> </p>
+            
+                            <input type="submit" class="btna" name="s" value="Predict"><br><br>
+            
+                        </form>
+            
+                        <a href="/"><button class="btnb" onclick="myFun()">Home</button></a>
+                            
+                </div>
+              </div>
+              </div></section></div>
+    </body>
+</html>
