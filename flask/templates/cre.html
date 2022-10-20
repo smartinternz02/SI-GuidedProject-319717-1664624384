@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Analysis</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<style type="text/css">
+	.result{
+    color:black;
+    margin-top:30px;
+    margin-bottom:20px;
+    font-size:25px;
+    color:red;
+    }  	
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				 <div class="page-header">
+    				<h1 style="color:red;">Credit Card Approval Prediction</h1>
+  				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<form id="form" action="/data_predict" method="POST" enctype="multipart/form-data">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="gender" style="color:red;">Gender</label>
+							    <select name="gender" class="form-control" id="gender">
+							        <option value="0">FEMALE</option>
+							        <option value="1">MALE</option>
+                                </select> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="car" style="color:red;">Own Car Or NOT</label>
+							    <select name="car" class="form-control" id="car">
+							        <option value="0">NO</option>
+							        <option value="1">Yes</option>
+                                </select> 
+							</div>
+						</div>						
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="estate" style="color:red;">Own Realstate</label>
+							    <select name="estate" class="form-control" id="estate">
+							        <option value="0">No</option>
+							        <option value="1">Yes</option>
+                                </select> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="a_income" style="color:red;">Total Anual Income</label>
+							    <input type="number" class="form-control" id="a_income" name="a_income">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="income" style="color:red;">Type of Income</label>
+							    <select name="income" class="form-control" id="income">
+							        <option value="0">Pensioner</option>
+							        <option value="1">Student</option>
+							        <option value="2">Working</option>
+                                </select> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="edu" style="color:red;">Education</label>
+							    <select name="edu" class="form-control" id="edu">
+
+							        <option value="1">Higher Education</option>
+							        <option value="2">Secondary</option>
+                                </select> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="family" style="color:red;">Family Status</label>
+							    <select name="family" class="form-control" id="family">
+							        <option value="0">Married</option>
+							        <option value="1">Single</option>
+                                </select> 
+							</div>
+						</div>						
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="house" style="color:red;">Type of Housing</label>
+							    <select name="house" class="form-control" id="house">
+							        <option value="0">House / apartment</option>
+							        <option value="1">With parents</option>
+                                </select> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+	
+						    <label for="birth" style="color:red;">Days Birth</label>
+							    <input type="number" class="form-control" id="birth" name="birth" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+	
+						    <label for="emp" style="color:red;">Days Employed</label>
+							    <input type="number" class="form-control" id="emp" name="emp" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+	
+						    <label for="m_family" style="color:red;">Family Members</label>
+							    <input type="number" class="form-control" id="m_family" name="m_family" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+	
+						    <label for="paid" style="color:red;">Emi Paid Off</label>
+							    <input type="number" class="form-control" id="paid" name="paid" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+	
+						    <label for="past" style="color:red;">Emi Of Pastdues</label>
+							    <input type="number" class="form-control" id="past" name="past" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+	
+						    <label for="loan" style="color:red;">No of Loans</label>
+							    <input type="number" class="form-control" id="loan" name="loan" >
+							</div>
+						</div>
+
+
+
+<center>
+<button type="submit" class="btn btn-default" style="color:red;">Predict</button>
+</center>
+				</form>
+			</div>
+		</div>
+	</div>
+<div class="result" id="data_predict">
+<center>
+<h3>
+  {{predictiont}}
+</h3></center>
+  </div>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script
+</body>
+</html>
